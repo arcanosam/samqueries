@@ -1,5 +1,5 @@
 /*
-    DEPENDs from table employer created on qry_calc_rev_cst.sql query
+    DEPENDs from table employee created on qry_calc_rev_cst.sql query
 */
 
 BEGIN;
@@ -39,7 +39,7 @@ AS $$
 
 	plan_prepare = None
 
-    qry_string = 'SELECT SUM(values) AS sum_credts FROM bill WHERE transaction_opt=\'C\' and fk_employee=%s' % employee_id
+    qry_string = 'SELECT SUM(values) AS sum_credts FROM bill WHERE transaction_opt=\'C\' AND fk_employee=%s' % employee_id
 
     plan_prepare = plpy.prepare(qry_string)
 
@@ -48,7 +48,7 @@ AS $$
 
 	plan_prepare = None
 
-    qry_string = 'SELECT SUM(values) AS sum_debts FROM bill WHERE transaction_opt=\'D\' and fk_employee=%s' % employee_id
+    qry_string = 'SELECT SUM(values) AS sum_debts FROM bill WHERE transaction_opt=\'D\' AND fk_employee=%s' % employee_id
 
     plan_prepare = plpy.prepare(qry_string)
 
