@@ -1,5 +1,6 @@
 /*
-    help to find and do the qry_count_enabled_users.sql
+    help to find and do the qry_count_enabled_users.sql and
+    qry_count_priv_of_table.sql
 */
 
 -- list all domains
