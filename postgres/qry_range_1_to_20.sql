@@ -7,7 +7,7 @@ AS $$
 		number_list.append(each_number)
 
 	return number_list
-  
+
 $$ LANGUAGE plpythonu;
 
-select generante_pylist_1to20();
+SELECT generante_pylist_1to20();
